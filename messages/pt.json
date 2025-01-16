@@ -1,0 +1,12 @@
+{
+  "HomePage": {
+    "title": "Olá mundo!",
+    "about": "Ir para a página sobre"
+  },
+  "Header": {
+    "products": "Produtos",
+    "about": "Sobre nós",
+    "contact": "Contato",
+    "catalogues": "Catálogos"
+  }
+}
