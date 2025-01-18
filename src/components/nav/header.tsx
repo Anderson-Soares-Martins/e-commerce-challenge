@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 export default function Header() {
   const t = useTranslations("Header");
   return (
-    <header className=" top-0 w-full bg-background/60 backdrop-blur-sm z-50 h-[85px] flex items-center justify-between">
+    <header className="top-0 w-full bg-background/60 backdrop-blur-sm z-50 h-[85px] flex items-center justify-between">
       <div className="flex items-center justify-between w-full ">
         <div className="flex items-center">
           <Link href="/" className="mr-4">
