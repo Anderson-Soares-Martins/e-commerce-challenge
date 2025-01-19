@@ -6,12 +6,13 @@ import { navRoutes } from "@/routes";
 import { Button } from "../ui/button";
 import SelectLanguage from "./select-language";
 import { useTranslations } from "next-intl";
+import AnimatedSearch from "../others/animated-search";
 
 export default function Header() {
   const t = useTranslations("Header");
   return (
-    <header className="top-0 w-full bg-background/60 backdrop-blur-sm z-50 h-[85px] flex items-center justify-between">
-      <div className="flex items-center justify-between w-full ">
+    <header className="top-0 w-full bg-background/60 backdrop-blur-sm z-50 h-[85px] flex items-center justify-between px-[5%] lg:px-[99px]">
+      <div className="flex items-center justify-between w-full">
         <div className="flex items-center">
           <Link href="/" className="mr-4">
             {/* <Image
@@ -26,7 +27,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center space-x-4">
+        <nav className="hidden lg:flex items-center gap-0 xl:gap-4">
           {navRoutes.map((route) => (
             <Button
               variant="ghost"
@@ -37,6 +38,8 @@ export default function Header() {
               <Link href={route.href}>{t(route.key)}</Link>
             </Button>
           ))}
+
+          <AnimatedSearch openTo="left" moveToDown />
         </nav>
 
         <div className="flex items-center space-x-4">

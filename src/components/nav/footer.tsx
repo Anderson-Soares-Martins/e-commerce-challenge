@@ -48,7 +48,7 @@ const navCategories = {
   catalogue: {
     title: "Downloads de Catálogos",
     options: [
-      { href: "/products/general-catalogue", label: "Catálogo geral" },
+      { href: "/products", label: "Catálogo geral" },
       { href: "/services/orthopedic", label: "Linha Orthopedic" },
       { href: "/services/sports", label: "Linha Sports" },
       { href: "/services/special-cares", label: "Linha Special Cares" },
@@ -59,9 +59,9 @@ const navCategories = {
   products: {
     title: "Linhas de produtos",
     options: [
-      { href: "/products/orthopedic", label: "Orthopedic" },
-      { href: "/products/sports", label: "Sports" },
-      { href: "/products/special-cares", label: "Special Cares" }
+      { href: "/orthopedic", label: "Orthopedic" },
+      { href: "/sports", label: "Sports" },
+      { href: "/special-cares", label: "Special Cares" }
     ]
   },
   contact: {

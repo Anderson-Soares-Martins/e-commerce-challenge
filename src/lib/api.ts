@@ -1,9 +1,27 @@
 import {products} from "@/lib/data/dataProducts"
 import {productFull} from "@/lib/data/dataProductFull"
 
-export async function fetchProducs(page: number, perPage: number) {
-  const allProducts = products.slice((page - 1) * perPage, page * perPage)
-  const totalProducts = products.length
+interface FetchProductsProps {
+  currentPage: number
+  perPage: number
+  news?: boolean
+  technology?: string[]
+  productsOptions?: string[]
+}
+
+export async function fetchProducs({currentPage, perPage = 12, news, technology, productsOptions}: FetchProductsProps) {
+
+  console.log(technology)
+  const filtredProducts = products.filter(product => {
+    if (news && !product.isNew) return false
+    if (technology && !technology.includes(product.family || "")) return false
+    if (productsOptions && (!product.options || !productsOptions.some(option => product.options!.includes(option)))) return false
+    return true
+  }
+  )
+  const allProducts = filtredProducts.slice((currentPage - 1) * perPage, currentPage * perPage)
+  const totalProducts = filtredProducts.length
+
   return { allProducts, totalProducts }
 }
 

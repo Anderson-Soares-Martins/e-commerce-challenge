@@ -17,5 +17,24 @@ export const navRoutes = [
   {
     name: "Catálogos",
     key: "catalogues",
-    href: "/catalogues",}
+    href: "/catalogues",
+  }
 ]
+
+export const breadcrumbRoutes = [
+  {
+    name: "Início",
+    href: "/pt",
+  },
+  {
+    name: "Produtos",
+    href: "/pt/products",
+  },
+  {
+    name: "Linha Orthopedic",
+    href: "/pt/orthopedic",
+  }
+  
+  
+
+] 

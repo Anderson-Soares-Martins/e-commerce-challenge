@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ProductsPage() {
@@ -11,7 +12,9 @@ export default function ProductsPage() {
         <p className="text-lg mb-6">
           Prevenção, Conforto e Recuperação para uma vida melhor.
         </p>
-        <Link href="/products/orthopedic">Explorar Linha Orthopedic</Link>
+        <Button variant="secondary" asChild>
+          <Link href="/orthopedic">Explorar Linha Orthopedic</Link>
+        </Button>
       </section>
 
       {/* Highlights Section */}
