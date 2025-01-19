@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface Props {
   images: string[];
@@ -108,8 +109,7 @@ export function VisualGallery({ images, className }: Props) {
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
-            className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: `url(${images[currentIndex]})` }}
+            className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
             custom={direction}
             variants={sliderVariants}
             initial="incoming"
@@ -120,7 +120,15 @@ export function VisualGallery({ images, className }: Props) {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             onDragEnd={(_, dragInfo) => handleDragEnd(dragInfo)}
-          />
+          >
+            <Image
+              src={images[currentIndex]}
+              alt="Product image"
+              width={1920}
+              height={1080}
+              className="object-cover w-full"
+            />
+          </motion.div>
         </AnimatePresence>
         {images.length > 1 && (
           <div className="absolute bottom-2 left-1/2 text-white bg-black/20 bg-opacity-50 px-2 py-1 backdrop-blur-[2px] rounded-md transform -translate-x-1/2">

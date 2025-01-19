@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,13 +14,22 @@ export interface ProductCardProps {
   code: string;
 }
 
-export function ProductsCard({ product }: { product: ProductCardProps }) {
+export function ProductsCard({
+  product,
+  className
+}: {
+  product: ProductCardProps;
+  className?: string;
+}) {
   const pathname = usePathname();
 
   return (
     <Link
       href={`${pathname}/${product.href}`}
-      className="group relative flex flex-col gap-2 cursor-pointer"
+      className={cn(
+        "group relative flex flex-col gap-2 cursor-pointer",
+        className
+      )}
     >
       {product.isNew && (
         <Badge className="absolute top-2 left-2 opacity-80 group-hover:opacity-100">
