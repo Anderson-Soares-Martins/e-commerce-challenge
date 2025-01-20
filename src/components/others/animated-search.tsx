@@ -54,7 +54,7 @@ const AnimatedSearch = ({
         }}
         transition={{
           type: "spring",
-          damping: 20,
+          damping: 40,
           stiffness: 300
         }}
       >
