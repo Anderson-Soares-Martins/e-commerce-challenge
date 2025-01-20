@@ -1,6 +1,6 @@
 # Desafio Técnico - Plathanus
 
-Este é um projeto desenvolvido como parte de um desafio técnico para a **PLathanus**. Ele utiliza [Next.js](https://nextjs.org) como base e foi desenvolvido com foco em performance, escalabilidade e boas práticas de desenvolvimento.
+Este é um projeto desenvolvido como parte de um desafio técnico para a **Plathanus**. Ele utiliza [Next.js](https://nextjs.org) como base e foi desenvolvido com foco em performance, escalabilidade e boas práticas de desenvolvimento.
 
 ## Demonstração
 
