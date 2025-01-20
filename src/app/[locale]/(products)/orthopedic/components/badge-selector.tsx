@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { PiTrademarkRegisteredLight } from "react-icons/pi";
 
@@ -49,6 +50,7 @@ const badges: BadgeItem[] = [
 
 const BadgeSelector: React.FC = () => {
   const [selectedDescriptions, setSelectedDescriptions] = useState(0);
+  const t = useTranslations("orthopedic");
 
   const handleBadgeClick = (index: number) => {
     setSelectedDescriptions(index);
@@ -75,7 +77,7 @@ const BadgeSelector: React.FC = () => {
       <div className="mt-6">
         {selectedDescriptions !== null && (
           <p className="w-full lg:w-1/2">
-            {badges[selectedDescriptions].description}
+            {t(`familyDescription.${badges[selectedDescriptions].label}`)}
           </p>
         )}
       </div>

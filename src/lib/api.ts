@@ -10,8 +10,6 @@ interface FetchProductsProps {
 }
 
 export async function fetchProducs({currentPage, perPage = 12, news, technology, productsOptions}: FetchProductsProps) {
-
-  console.log(technology)
   const filtredProducts = products.filter(product => {
     if (news && !product.isNew) return false
     if (technology && !technology.includes(product.family || "")) return false

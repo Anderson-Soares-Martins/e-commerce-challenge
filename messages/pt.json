@@ -1,12 +1,40 @@
 {
   "HomePage": {
     "title": "Olá mundo!",
-    "about": "Ir para a página sobre"
+    "products": "Ir para a página Produtos"
   },
   "Header": {
     "products": "Produtos",
     "about": "Sobre nós",
     "contact": "Contato",
     "catalogues": "Catálogos"
+  },
+  "orthopedic": {
+    "line": "Linha",
+    "description": "Produtos desenvolvidos para auxiliar na prevenção e retorno das atividades, no tratamento e recuperação de pacientes com lesões ortopédicas.",
+    "know": "Conheça as famílias exclusivas da linha Orthopedic",
+    "see": "Ver produtos",
+    "familyDescription": {
+      "Hidrolight Neo": "Família voltada para extrair os benefícios do Neoprene. Propriedades térmicas, compressivas e elásticas: são essas três propriedades que fazem do Neoprene uma ferramenta eficaz no tratamento e prevenção de lesões no tratamento ortopédico.",
+      "Comfort Air": "Família de produtos que utilizam a tecnologia do Airprene. O Airprene é um material que possui propriedades térmicas, compressivas e elásticas, que auxiliam no tratamento e prevenção de lesões ortopédicas.",
+      "Ortho Recovery": "Produtos desenvolvidos para auxiliar na recuperação ortopédica, proporcionando suporte e conforto durante o processo de reabilitação.",
+      "Air Flex": "Linha de produtos que oferece flexibilidade e suporte, ideal para quem busca conforto e eficiência no tratamento ortopédico.",
+      "Softline": "Produtos com design ergonômico e materiais suaves, garantindo conforto e eficácia no tratamento de lesões ortopédicas.",
+      "Foot Care": "Especialmente desenvolvida para cuidados com os pés, proporcionando alívio e suporte para diversas condições ortopédicas.",
+      "Lean": "Linha de produtos leves e eficientes, projetados para oferecer suporte sem comprometer a mobilidade durante o tratamento ortopédico."
+    }
+  },
+  "filters": {
+    "filters": "Filtros",
+    "lancamentos": "Lançamentos",
+    "produtos": "Produtos",
+    "falimias/tecnologias": "Famílias/Tecnologias",
+    "hidrolight-neo": "Hidrolight Neo",
+    "comfort-air": "Comfort Air",
+    "ortho-recovery": "Ortho Recovery",
+    "tornozeleira": "Tornozeleira",
+    "joelheira": "Joelheira",
+    "caneleira": "Caneleira",
+    "cotoveleira": "Cotoveleira"
   }
 }

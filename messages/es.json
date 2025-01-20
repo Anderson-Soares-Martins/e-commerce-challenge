@@ -1,6 +1,40 @@
 {
   "HomePage": {
     "title": "¡Hola mundo!",
-    "about": "Ir a la página sobre"
+    "products": "Ir a la página de Productos"
+  },
+  "Header": {
+    "products": "Productos",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "catalogues": "Catálogos"
+  },
+  "orthopedic": {
+    "line": "Línea",
+    "description": "Productos desarrollados para ayudar en la prevención y retorno a las actividades, en el tratamiento y recuperación de pacientes con lesiones ortopédicas.",
+    "know": "Descubre las familias exclusivas de la línea Orthopedic",
+    "see": "Ver productos",
+    "familyDescription": {
+      "Hidrolight Neo": "Familia diseñada para aprovechar los beneficios del Neopreno. Propiedades térmicas, compresivas y elásticas: estas tres características hacen del Neopreno una herramienta eficaz en el tratamiento y prevención de lesiones en el cuidado ortopédico.",
+      "Comfort Air": "Familia de productos que utiliza la tecnología Airprene. El Airprene es un material con propiedades térmicas, compresivas y elásticas que ayudan en el tratamiento y prevención de lesiones ortopédicas.",
+      "Ortho Recovery": "Productos desarrollados para ayudar en la recuperación ortopédica, proporcionando soporte y comodidad durante el proceso de rehabilitación.",
+      "Air Flex": "Línea de productos que ofrece flexibilidad y soporte, ideal para quienes buscan comodidad y eficiencia en el tratamiento ortopédico.",
+      "Softline": "Productos con diseño ergonómico y materiales suaves, garantizando comodidad y eficacia en el tratamiento de lesiones ortopédicas.",
+      "Foot Care": "Especialmente desarrollada para el cuidado de los pies, proporcionando alivio y soporte para diversas condiciones ortopédicas.",
+      "Lean": "Línea de productos ligeros y eficientes, diseñados para ofrecer soporte sin comprometer la movilidad durante el tratamiento ortopédico."
+    }
+  },
+  "filters": {
+    "filters": "Filtros",
+    "lancamentos": "Novedades",
+    "produtos": "Productos",
+    "falimias/tecnologias": "Familias/Tecnologías",
+    "hidrolight-neo": "Hidrolight Neo",
+    "comfort-air": "Comfort Air",
+    "ortho-recovery": "Ortho Recovery",
+    "tornozeleira": "Tobillera",
+    "joelheira": "Rodillera",
+    "caneleira": "Espinillera",
+    "cotoveleira": "Codera"
   }
 }

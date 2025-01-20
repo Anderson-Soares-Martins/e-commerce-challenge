@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/form";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const options: SidebarItem[] = [
   {
@@ -148,6 +149,8 @@ export function SidebarFilter() {
     return () => subscription.unsubscribe();
   }, [form]);
 
+  const t = useTranslations("filters");
+
   return (
     <Form {...form}>
       <form
@@ -155,7 +158,7 @@ export function SidebarFilter() {
         className="flex flex-col divide-y divide-gray-300 h-fit rounded-lg overflow-hidden"
       >
         <h1 className="font-medium px-4 py-6 rounded-t-lg border border-b-0">
-          Filtros
+          {t("filters")}
         </h1>
 
         {options.map((item) => (
@@ -174,6 +177,7 @@ function SidebarItem({
   form: ReturnType<typeof useForm<z.infer<typeof FilterSchema>>>;
 }) {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("filters");
 
   return (
     <Collapsible
@@ -201,7 +205,7 @@ function SidebarItem({
                     }}
                     className="text-base font-medium hover:text-black hover:bg-gray-300 h-full w-full py-8 rounded-none space-x-12 flex justify-between items-center"
                   >
-                    <p>{item.label}</p>
+                    <p>{t(item.id)}</p>
                     {item.options && item.options.length > 0 ? (
                       <AiOutlineDown className="transition-transform duration-300 ease-in-out group-data-[state=open]/collapsible:rotate-180" />
                     ) : (
@@ -248,7 +252,7 @@ function SidebarItem({
                       />
                     </FormControl>
                     <FormLabel className="text-sm font-normal cursor-pointer">
-                      {option.label}
+                      {t(option.id)}
                     </FormLabel>
                   </FormItem>
                 );

@@ -21,7 +21,10 @@ const Breadcrumb = ({ dynamicRouter }: BreadcrumbProps) => {
   const pathname = usePathname();
 
   const getBreadcrumbItems = () => {
-    const pathSegments = pathname.split("/").filter((segment) => segment);
+    const pathSegments = pathname
+      .split("/")
+      .filter((segment) => segment)
+      .slice(1);
     let routesToBreadcrumb = breadcrumbRoutes;
     if (dynamicRouter) {
       routesToBreadcrumb = [
@@ -47,6 +50,8 @@ const Breadcrumb = ({ dynamicRouter }: BreadcrumbProps) => {
   return (
     <BaseBreadcrumb className="py-3">
       <BreadcrumbList>
+        <BreadcrumbLink href="/">Início</BreadcrumbLink>
+        {breadcrumbItems.length > 0 && <BreadcrumbSeparator />}
         {breadcrumbItems.map((item, index) => (
           <React.Fragment key={index}>
             <BreadcrumbLink

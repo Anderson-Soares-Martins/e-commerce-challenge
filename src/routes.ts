@@ -23,16 +23,12 @@ export const navRoutes = [
 
 export const breadcrumbRoutes = [
   {
-    name: "Início",
-    href: "/pt",
-  },
-  {
     name: "Produtos",
-    href: "/pt/products",
+    href: "/products",
   },
   {
     name: "Linha Orthopedic",
-    href: "/pt/orthopedic",
+    href: "/orthopedic",
   }
   
   

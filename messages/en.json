@@ -1,6 +1,40 @@
 {
   "HomePage": {
     "title": "Hello world!",
-    "about": "Go to the about page"
+    "products": "Go to the Products page"
+  },
+  "Header": {
+    "products": "Products",
+    "about": "About us",
+    "contact": "Contact",
+    "catalogues": "Catalogues"
+  },
+  "orthopedic": {
+    "line": "Line",
+    "description": "Products developed to assist in prevention and return to activities, treatment, and recovery of patients with orthopedic injuries.",
+    "know": "Discover the exclusive families of the Orthopedic line",
+    "see": "See products",
+    "familyDescription": {
+      "Hidrolight Neo": "A family designed to extract the benefits of Neoprene. Thermal, compressive, and elastic properties: these three characteristics make Neoprene an effective tool in the treatment and prevention of injuries in orthopedic care.",
+      "Comfort Air": "A family of products utilizing Airprene technology. Airprene is a material with thermal, compressive, and elastic properties that aid in the treatment and prevention of orthopedic injuries.",
+      "Ortho Recovery": "Products developed to assist in orthopedic recovery, providing support and comfort during the rehabilitation process.",
+      "Air Flex": "A product line that offers flexibility and support, ideal for those seeking comfort and efficiency in orthopedic treatment.",
+      "Softline": "Products with ergonomic design and soft materials, ensuring comfort and effectiveness in treating orthopedic injuries.",
+      "Foot Care": "Specifically developed for foot care, providing relief and support for various orthopedic conditions.",
+      "Lean": "A line of lightweight and efficient products designed to offer support without compromising mobility during orthopedic treatment."
+    }
+  },
+  "filters": {
+    "filters": "Filters",
+    "lancamentos": "New Arrivals",
+    "produtos": "Products",
+    "falimias/tecnologias": "Families/Technologies",
+    "hidrolight-neo": "Hidrolight Neo",
+    "comfort-air": "Comfort Air",
+    "ortho-recovery": "Ortho Recovery",
+    "tornozeleira": "Ankle Brace",
+    "joelheira": "Knee Brace",
+    "caneleira": "Shin Guard",
+    "cotoveleira": "Elbow Brace"
   }
 }

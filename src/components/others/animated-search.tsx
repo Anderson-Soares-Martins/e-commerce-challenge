@@ -39,7 +39,7 @@ const AnimatedSearch = ({
     <motion.form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="relative h-10 w-10"
+      className="relative h-10 w-10 mr-2"
       onBlur={handleBlur}
     >
       <motion.div
