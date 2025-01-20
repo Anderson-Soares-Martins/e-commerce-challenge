@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { HiMiniMagnifyingGlassPlus } from "react-icons/hi2";
 
 interface Props {
   images: string[];
@@ -41,6 +42,20 @@ export function VisualGallery({ images, className }: Props) {
   >([0, 0]);
   const thumbnailsRef = useRef<(HTMLImageElement | null)[]>([]);
   const thumbnailsContainerRef = useRef<HTMLDivElement | null>(null);
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const [isZooming, setIsZooming] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!imageContainerRef.current) return;
+
+    const { left, top, width, height } =
+      imageContainerRef.current.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+
+    setMousePosition({ x, y });
+  };
 
   const handleSwipe = (swipeDirection: number) => {
     const newIndex = currentIndex + swipeDirection;
@@ -70,29 +85,24 @@ export function VisualGallery({ images, className }: Props) {
 
     if (!container || !activeThumbnail) return;
 
-    // Obter dimensões e posições
     const containerRect = container.getBoundingClientRect();
     const thumbnailRect = activeThumbnail.getBoundingClientRect();
 
-    // Calcular a posição ideal para centralizar a thumbnail
     const thumbnailCenter = thumbnailRect.left + thumbnailRect.width / 2;
     const containerCenter = containerRect.left + containerRect.width / 2;
     const scrollOffset =
       container.scrollLeft + (thumbnailCenter - containerCenter);
 
-    // Aplicar o scroll com animação suave
     container.scrollTo({
       left: scrollOffset,
       behavior: "smooth"
     });
   };
 
-  // Atualizar scroll quando o índice mudar
   useEffect(() => {
     scrollToActiveThumbnail();
   }, [currentIndex]);
 
-  // Adicionar listener para redimensionamento da janela
   useEffect(() => {
     const handleResize = () => {
       scrollToActiveThumbnail();
@@ -104,8 +114,13 @@ export function VisualGallery({ images, className }: Props) {
 
   return (
     <div className={cn("w-full", className)}>
-      {/* Main image with animation */}
-      <div className="relative w-full overflow-hidden rounded-lg border border-gray-300 aspect-[16/12]">
+      <div
+        className="relative w-full overflow-hidden rounded-lg border border-gray-300 aspect-[16/12]"
+        ref={imageContainerRef}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => setIsZooming(true)}
+        onMouseLeave={() => setIsZooming(false)}
+      >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -121,13 +136,23 @@ export function VisualGallery({ images, className }: Props) {
             dragElastic={1}
             onDragEnd={(_, dragInfo) => handleDragEnd(dragInfo)}
           >
-            <Image
-              src={images[currentIndex]}
-              alt="Product image"
-              width={1920}
-              height={1080}
-              className="object-cover w-full"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={images[currentIndex]}
+                alt="Product image"
+                width={1920}
+                height={1080}
+                className={cn(
+                  "object-cover w-full transition-transform duration-200",
+                  isZooming ? "scale-150" : "scale-100"
+                )}
+                style={{
+                  transformOrigin: isZooming
+                    ? `${mousePosition.x}% ${mousePosition.y}%`
+                    : "center"
+                }}
+              />
+            </div>
           </motion.div>
         </AnimatePresence>
         {images.length > 1 && (
@@ -135,6 +160,10 @@ export function VisualGallery({ images, className }: Props) {
             {currentIndex + 1}/{images.length}
           </div>
         )}
+
+        <div className="absolute bottom-2 right-2 text-white bg-black/20 bg-opacity-50 px-2 py-2 backdrop-blur-[2px] rounded-md">
+          <HiMiniMagnifyingGlassPlus />
+        </div>
       </div>
 
       <div className="flex items-center justify-center gap-2 mt-4">

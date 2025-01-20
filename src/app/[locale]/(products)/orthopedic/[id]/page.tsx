@@ -1,11 +1,11 @@
 import { fetchProducs, fetchProductById } from "@/lib/api";
-import { VisualGallery } from "./components/VisualGallery";
-import { VideoPlayer } from "./components/VideoPlayer";
-import OthersProducts from "./components/OthersProducts";
+import { VideoPlayer } from "./components/video-player";
+import OthersProducts from "./components/others-products";
 import Breadcrumb from "@/components/others/breadcrumb";
 import { AccordionInfo } from "./sections/accordion-info";
 import { ImageDetailsSection } from "./components/image-details-section";
 import { InfosProduct } from "./components/infos-product";
+import { VisualGallery } from "./components/visual-gallery";
 
 interface ProductDetailProps {
   params: Promise<{ id: string }>;
