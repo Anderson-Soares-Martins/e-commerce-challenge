@@ -83,9 +83,9 @@ Durante o desenvolvimento deste projeto, adquiri e apliquei conhecimentos sobre:
 
 Se eu tivesse mais tempo, implementaria:
 
-- **Testes automatizados com Jest ou Cypress**
-- **Melhorias na experiência do usuário (UX)**
+- **Testes de integrações com jest e cypress**
 - **Otimização para SEO ou integração com APIs**
+- **Melhor otimização de imagens**
 - **Build das página no estaticas**
 - **Microanimações**
 
