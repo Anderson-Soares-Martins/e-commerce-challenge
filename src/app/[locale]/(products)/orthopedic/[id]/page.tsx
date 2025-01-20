@@ -11,12 +11,6 @@ interface ProductDetailProps {
   params: Promise<{ id: string }>;
 }
 
-export const levels = [
-  "Recuperação e tratamento de lesões LEVES",
-  "Recuperação e tratamento de lesões MODERADAS",
-  "Recuperação e tratamento de lesões GRAVES"
-];
-
 export default async function ProductDetail({ params }: ProductDetailProps) {
   const { id } = await params;
   const product = await fetchProductById(id);

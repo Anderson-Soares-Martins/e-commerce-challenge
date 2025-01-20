@@ -2,11 +2,11 @@ import { Icons } from "@/assets/icons";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ProductFullProps } from "@/lib/data/dataProductFull";
+import { levels } from "@/lib/data/infos";
 import Link from "next/link";
 import { FaCircle } from "react-icons/fa6";
 import { PiTrademarkRegisteredLight } from "react-icons/pi";
 import { TfiArrowsCorner } from "react-icons/tfi";
-import { levels } from "../page";
 
 export function InfosProduct({ product }: { product: ProductFullProps }) {
   return (

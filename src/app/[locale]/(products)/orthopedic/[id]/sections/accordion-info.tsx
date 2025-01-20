@@ -1,6 +1,6 @@
 import { ProductFullProps } from "@/lib/data/dataProductFull";
 import { Accordion } from "../components/accordion";
-import { levels } from "../page";
+import { levels } from "@/lib/data/infos";
 
 export function AccordionInfo({ product }: { product: ProductFullProps }) {
   return (
